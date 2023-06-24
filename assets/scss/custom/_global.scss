@@ -1,0 +1,43 @@
+body {
+    background-color: $white;
+    font-family: $mainFont;
+}
+
+.button {
+    color: $gray;
+    padding: em(10) em(20);
+    border-radius: em(12);
+    border: 2px solid $gray;
+    background-color: transparent;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: $black;
+        border-color: $black;
+    }
+
+    &--secondary {
+        color: $white;
+        background-color: $black;
+        border-color: transparent;
+        border-width: 1px;
+        font-weight: 700;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+.attribution {
+    font-family: $mainFont;
+    font-size: em(12);
+    text-align: center;
+    padding: 20px 10px;
+    color: $black;
+
+    a {
+        color: $black;
+    }
+}

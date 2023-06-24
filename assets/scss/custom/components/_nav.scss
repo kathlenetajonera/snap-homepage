@@ -1,0 +1,113 @@
+.nav {
+    $this: &;
+    padding-top: em(30);
+    max-width: rem(1460);
+    margin: 0 auto;
+
+    &__menu-wrapper {
+        align-items: flex-end;
+    }
+
+    &__menu {
+        margin-left: em(70);
+    }
+
+    &__item {
+        margin-right: em(45);
+        padding: em(10) 0;
+        position: relative;
+
+        &:hover {
+            > .nav__link {
+                color: $black;
+
+                &::after {
+                    filter: brightness(0);
+                }
+            }
+        }
+
+        &--dropdown {
+            > .nav__link {
+                position: relative;
+
+                &::after {
+                    content: url('../images/icon-arrow-down.svg');
+                    display: inline-block;
+                    margin-left: 5px;
+                    margin-bottom: 4px;
+                    transition: 0.3s ease;
+                }
+            }
+
+            &:hover {
+                .nav__link::after {
+                    transform: rotate(180deg);
+                }
+
+                .nav__dropdown {
+                    opacity: 1;
+                    transform: translateY(100%);
+                    pointer-events: all;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        font-family: $mainFont;
+        color: $gray;
+        font-size: em(16);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        white-space: nowrap;
+    }
+
+    &__dropdown {
+        // display: none;
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(110%);
+        background-color: #fff;
+        padding: em(24);
+        border-radius: em(12);
+        box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+        transition: 0.3s ease;
+
+        &.with-icons {
+            left: unset;
+            right: 0;
+        }
+
+        .nav__item {
+            padding: 0;
+            margin: 0;
+
+            &:not(:last-child) {
+                padding-bottom: em(10);
+            }
+        }
+
+        .nav__link {
+            font-size: em(12);
+        }
+    }
+
+    &__icon-wrap {
+        width: em(40);
+    }
+
+    .button {
+        @extend .nav__link;
+        transition: 0.3s ease;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}

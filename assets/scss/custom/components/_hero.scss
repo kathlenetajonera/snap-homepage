@@ -1,0 +1,34 @@
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(150);
+    align-items: flex-end;
+    max-width: rem(1225);
+    margin: rem(80) auto;
+
+    &__heading {
+        font-size: rem(81);
+    }
+
+    &__subheading-wrapper {
+        margin: rem(60) 0 rem(110) 0;
+
+        p {
+            font-size: rem(20);
+            line-height: 1.5;
+            color: $gray;
+        }
+
+        .button {
+            font-size: rem(18);
+            margin-top: rem(60);
+            padding: rem(20) rem(30);
+            border-radius: rem(16);
+        }
+    }
+
+    &__logo-wrapper {
+        flex: 1;
+        text-align: center;
+    }
+}

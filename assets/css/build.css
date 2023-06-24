@@ -1,0 +1,445 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+.animated-fade,
+.animated-stagger-bottom > * {
+  visibility: hidden;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@font-face {
+  font-family: "Epilogue";
+  src: url("../fonts/Epilogue-Bold.woff2") format("woff2"), url("../fonts/Epilogue-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Epilogue";
+  src: url("../fonts/Epilogue-Medium.woff2") format("woff2"), url("../fonts/Epilogue-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: #fafafa;
+  font-family: "Epilogue";
+}
+
+.button {
+  color: #696969;
+  padding: 0.625em 1.25em;
+  border-radius: 0.75em;
+  border: 2px solid #696969;
+  background-color: transparent;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.button:hover {
+  color: #141414;
+  border-color: #141414;
+}
+.button--secondary {
+  color: #fafafa;
+  background-color: #141414;
+  border-color: transparent;
+  border-width: 1px;
+  font-weight: 700;
+}
+.button--secondary:hover {
+  background-color: transparent;
+}
+
+.attribution {
+  font-family: "Epilogue";
+  font-size: 0.75em;
+  text-align: center;
+  padding: 20px 10px;
+  color: #141414;
+}
+.attribution a {
+  color: #141414;
+}
+
+.nav {
+  padding-top: 1.875em;
+  max-width: 91.25rem;
+  margin: 0 auto;
+}
+.nav__menu-wrapper {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.nav__menu {
+  margin-left: 4.375em;
+}
+.nav__item {
+  margin-right: 2.8125em;
+  padding: 0.625em 0;
+  position: relative;
+}
+.nav__item:hover > .nav__link, .nav .nav__item:hover > .button {
+  color: #141414;
+}
+.nav__item:hover > .nav__link::after, .nav .nav__item:hover > .button::after {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+}
+.nav__item--dropdown > .nav__link, .nav .nav__item--dropdown > .button {
+  position: relative;
+}
+.nav__item--dropdown > .nav__link::after, .nav .nav__item--dropdown > .button::after {
+  content: url("../images/icon-arrow-down.svg");
+  display: inline-block;
+  margin-left: 5px;
+  margin-bottom: 4px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.nav__item--dropdown:hover .nav__link::after, .nav__item--dropdown:hover .nav .button::after, .nav .nav__item--dropdown:hover .button::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.nav__item--dropdown:hover .nav__dropdown {
+  opacity: 1;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  pointer-events: all;
+}
+.nav__link, .nav .button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Epilogue";
+  color: #696969;
+  font-size: 1em;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+.nav__dropdown {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
+  background-color: #fff;
+  padding: 1.5em;
+  border-radius: 0.75em;
+  -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.nav__dropdown.with-icons {
+  left: unset;
+  right: 0;
+}
+.nav__dropdown .nav__item {
+  padding: 0;
+  margin: 0;
+}
+.nav__dropdown .nav__item:not(:last-child) {
+  padding-bottom: 0.625em;
+}
+.nav__dropdown .nav__link, .nav__dropdown .nav .button, .nav .nav__dropdown .button {
+  font-size: 0.75em;
+}
+.nav__icon-wrap {
+  width: 2.5em;
+}
+.nav .button {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.nav .button:hover {
+  color: #141414;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 9.375rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 9.375rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 76.5625rem;
+  margin: 5rem auto;
+}
+.hero__heading {
+  font-size: 5.0625rem;
+}
+.hero__subheading-wrapper {
+  margin: 3.75rem 0 6.875rem 0;
+}
+.hero__subheading-wrapper p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #696969;
+}
+.hero__subheading-wrapper .button {
+  font-size: 1.125rem;
+  margin-top: 3.75rem;
+  padding: 1.25rem 1.875rem;
+  border-radius: 1rem;
+}
+.hero__logo-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
