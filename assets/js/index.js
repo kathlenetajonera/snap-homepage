@@ -26,7 +26,7 @@ function updateHeroImageBasedOnSize() {
     const desktopImage = heroImage.getAttribute('data-src-desktop');
     const mobileImage = heroImage.getAttribute('data-src-mobile');
 
-    if (windowWidth >= 1024) {
+    if (windowWidth > 1024) {
         heroImage.setAttribute('src', desktopImage);
     } else {
         heroImage.setAttribute('src', mobileImage);

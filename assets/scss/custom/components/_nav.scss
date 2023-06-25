@@ -54,12 +54,13 @@
         @include breakpoint(tablet) {
             // display: none;
             transform: translateX(100%);
-            position: absolute;
+            position: fixed;
             background: $white;
             height: 100%;
             right: 0;
             top: 0;
             width: 60%;
+            max-width: 300px;
             z-index: 2;
 
             flex-direction: column;

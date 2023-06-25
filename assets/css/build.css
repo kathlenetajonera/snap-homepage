@@ -265,6 +265,9 @@ button {
   font-style: normal;
   font-display: swap;
 }
+html {
+  overflow-x: hidden;
+}
 @media (max-width: 1280px) {
   html {
     font-size: 14px;
@@ -274,6 +277,7 @@ button {
 body {
   background-color: #fafafa;
   font-family: "Epilogue";
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -369,12 +373,13 @@ body {
   .nav__menu {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-    position: absolute;
+    position: fixed;
     background: #fafafa;
     height: 100%;
     right: 0;
     top: 0;
     width: 60%;
+    max-width: 300px;
     z-index: 2;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
