@@ -1,3 +1,5 @@
+const nav = document.querySelector('.nav');
+const navIcon = document.querySelector('.nav__navicon');
 const heroImage = document.querySelector('.hero__image');
 let windowWidth = window.innerWidth;
 let resizeTimer;
@@ -6,6 +8,7 @@ init();
 
 function init() {
     updateHeroImageBasedOnSize();
+    windowWidth < 1024 && handleMobileNav();
 
     window.addEventListener('resize', () => {
         if (window.innerWidth !== windowWidth) {
@@ -28,4 +31,19 @@ function updateHeroImageBasedOnSize() {
     } else {
         heroImage.setAttribute('src', mobileImage);
     }
+}
+
+function handleMobileNav() {
+    const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+
+    navIcon.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+    dropdownItems.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            const currentItem = e.target.closest('.nav__item--dropdown');
+            currentItem && currentItem.classList.toggle('active');
+        });
+    });
 }
