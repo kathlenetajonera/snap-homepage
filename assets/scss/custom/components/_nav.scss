@@ -1,20 +1,54 @@
 .nav {
     $this: &;
-    padding-top: em(30);
-    max-width: rem(1460);
+    padding-top: rem(30);
+    width: rem(1460);
+    max-width: 93%;
     margin: 0 auto;
+
+    @include breakpoint(desktopXs) {
+        max-width: 100%;
+        padding: rem(30) rem(50);
+    }
+
+    @include breakpoint(tablet) {
+        align-items: flex-start;
+    }
+
+    @include breakpoint(mobile) {
+        padding: rem(30);
+    }
+
+    &.active {
+        .nav__burger {
+            &:first-child {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
 
     &__menu-wrapper {
         align-items: flex-end;
     }
 
     &__menu {
-        margin-left: em(70);
+        margin-left: rem(70);
+
+        @include breakpoint(tablet) {
+            display: none;
+        }
     }
 
     &__item {
-        margin-right: em(45);
-        padding: em(10) 0;
+        margin-right: rem(45);
+        padding: rem(10) 0;
         position: relative;
 
         &:hover {
@@ -59,7 +93,7 @@
         align-items: center;
         font-family: $mainFont;
         color: $gray;
-        font-size: em(16);
+        font-size: rem(16);
         text-decoration: none;
         transition: color 0.3s ease;
         white-space: nowrap;
@@ -73,8 +107,8 @@
         bottom: 0;
         transform: translateY(110%);
         background-color: #fff;
-        padding: em(24);
-        border-radius: em(12);
+        padding: rem(24);
+        border-radius: rem(12);
         box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1);
         pointer-events: none;
         transition: 0.3s ease;
@@ -89,17 +123,23 @@
             margin: 0;
 
             &:not(:last-child) {
-                padding-bottom: em(10);
+                padding-bottom: rem(10);
             }
         }
 
         .nav__link {
-            font-size: em(12);
+            font-size: rem(12);
         }
     }
 
     &__icon-wrap {
-        width: em(40);
+        width: rem(40);
+    }
+
+    &__buttons {
+        @include breakpoint(tablet) {
+            display: none;
+        }
     }
 
     .button {
@@ -108,6 +148,34 @@
 
         &:hover {
             color: $black;
+        }
+    }
+
+    &__navicon {
+        display: none;
+
+        @include breakpoint(tablet) {
+            display: block;
+        }
+    }
+
+    &__burger {
+        display: block;
+        width: em(45);
+        height: em(3);
+        background-color: $black;
+        transition: 0.3s ease;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        &:first-child {
+            transform-origin: 15px -5px;
+        }
+
+        &:last-child {
+            transform-origin: 1px 2px;
         }
     }
 }

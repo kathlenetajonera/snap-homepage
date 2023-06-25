@@ -5,8 +5,7 @@ $browser-context: 16; // Default
 }
 
 @function rem($value) {
-    $remValue: ($value / 16) + rem;
-    @return $remValue;
+    @return ($value / $browser-context) + rem;
 }
 
 .flex {
